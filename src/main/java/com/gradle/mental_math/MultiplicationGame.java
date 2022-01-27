@@ -1,14 +1,20 @@
 package com.gradle.mental_math;
 
-public class MultiplicationGame {
-    private ConsoleWriter writer;
+import java.util.Scanner;
 
-    public MultiplicationGame(ConsoleWriter writer) {
-        this.writer = writer;
+public class MultiplicationGame {
+    private Scanner scanner;
+    private ConsoleWrapper wrapper;
+
+    public MultiplicationGame(ConsoleWrapper wrapper) {
+        this.wrapper = wrapper;
+        this.scanner = new Scanner(System.in);
     }
 
     public void start() {
-        this.writer.print("New game!");
-        this.writer.print("Pick a number you want to practice your multiplication skills for...");
+        this.wrapper.print("New game!");
+        this.wrapper.print("Pick a number you want to practice your multiplication skills for...");
+
+        String times = this.scanner.next();
     }
 }
